@@ -135,6 +135,9 @@ Berikut merupakan penjelasan visual berdasarkan rancangan tampilan website **Kue
 ---
 
 # 🖥️ Slide 1 — Login Page
+
+<img width="668" height="338" alt="image" src="https://github.com/user-attachments/assets/ead0ad91-c55f-410e-a981-5473526fbac8" />
+
 **Judul:** *Halaman Login — Autentikasi Pengguna*
 
 ### 📸 Deskripsi Visual:
@@ -152,6 +155,9 @@ Menjelaskan sistem autentikasi pengguna sebelum masuk dashboard.
 ---
 
 # 🧭 Slide 2 — Dashboard / Home
+
+<img width="924" height="329" alt="image" src="https://github.com/user-attachments/assets/c478d5e4-bf95-4e48-90ee-b996faf411a9" />
+
 **Judul:** *Dashboard Admin — Ringkasan & Navigasi*
 
 ### 📸 Deskripsi Visual:
@@ -165,6 +171,9 @@ Menampilkan logo besar, sidebar navigasi kiri (Dashboard, Sistem Manager, Master
 ---
 
 # 🔐 Slide 3 — Role Management
+
+<img width="889" height="324" alt="image" src="https://github.com/user-attachments/assets/5fe77d3b-d675-468c-8bc2-30b2c46f6316" />
+
 **Judul:** *Role Management — Kontrol Akses Berbasis Peran*
 
 ### 📸 Deskripsi Visual:
@@ -181,6 +190,9 @@ Tabel dengan kolom **Role Id**, **Name**, **Status**, dan tombol **CREATE NEW**.
 ---
 
 # 👥 Slide 4 — User Management
+
+<img width="883" height="323" alt="image" src="https://github.com/user-attachments/assets/37fd6c8b-ab0f-48bf-8831-590764023710" />
+
 **Judul:** *User Management — Kelola Data Pengguna*
 
 ### 📸 Deskripsi Visual:
@@ -195,6 +207,9 @@ Tabel berisi **User Id**, **Name**, **Role**, **Status**, dan **Last Login**.
 ---
 
 # 🧩 Slide 5 — Menu Management
+
+<img width="750" height="307" alt="image" src="https://github.com/user-attachments/assets/e2a0c50d-07cf-4ec1-8028-8f802fa3f310" />
+
 **Judul:** *Menu Management — Mengatur Struktur Navigasi Aplikasi*
 
 ### 📸 Deskripsi Visual:
@@ -212,6 +227,9 @@ Sidebar kiri menampilkan hasil menu secara real-time.
 ---
 
 # 🧾 Slide 6 — Menu Editor
+
+<img width="786" height="315" alt="image" src="https://github.com/user-attachments/assets/0e4f324b-f7f0-478e-95d9-aca28adf0a58" />
+
 **Judul:** *Menu Editor — Formulir Membuat/Mengubah Menu*
 
 ### 📸 Deskripsi Visual:
