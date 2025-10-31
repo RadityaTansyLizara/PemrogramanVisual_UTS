@@ -4,6 +4,7 @@
 | **NIM** | 312310454 |
 | **Kelas** | TI.23.A5 |
 | **Mata Kuliah** | Pemrograman Visual (Desktop) |
+| **Link Youtube** | https://youtu.be/Q6jZDM86JrU |
 
 # 🍪 KUE KERING 3 BERLIAN
 ## Website E-Commerce & Admin Panel untuk Usaha Kue Kering
