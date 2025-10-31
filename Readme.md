@@ -208,81 +208,56 @@
 ### Judul slide: Menu Editor — Formulir Membuat/Mengubah Menu
 
 ### Deskripsi visual singkat:
-Form berlabel “General Info” berisi field: Menu Id, Name, Parent (dropdown), Level, Sequence, Link, Icon, Tag1, Tag2, Status (toggle), dan tombol SAVE / BACK.
+#### Form berlabel “General Info” berisi field: Menu Id, Name, Parent (dropdown), Level, Sequence, Link, Icon, Tag1, Tag2, Status (toggle), dan tombol SAVE / BACK.
 
-Tujuan:
-Menjelaskan tiap field, aturan pengisian, dan alur validasi untuk memastikan menu konsisten dan tidak merusak navigasi.
+### Tujuan:
+#### Menjelaskan tiap field, aturan pengisian, dan alur validasi untuk memastikan menu konsisten dan tidak merusak navigasi.
 
-Penjelasan field-by-field:
+### Penjelasan field-by-field:
+### 1. Menu Id
+#### - Identifier unik (string). Bisa auto-generated atau format manual (mis. M10000).
+#### - Validasi: unik, tidak boleh kosong.
 
-Menu Id
+### 2. Name
+#### - Label yang tampil di UI. Support i18n jika aplikasi multi-bahasa.
+#### - Validasi: tidak kosong, panjang maksimum (mis. 100 char).
 
-Identifier unik (string). Bisa auto-generated atau format manual (mis. M10000).
+### 3. Parent
+#### - Dropdown berisi daftar menu yang bisa dipilih sebagai parent. Pilih Select Parent Menu jika top-level.
+#### - Catatan: saat memilih parent, Level sebaiknya dihitung otomatis (parent.level + 1).
 
-Validasi: unik, tidak boleh kosong.
+### 4. Level
+#### - Menunjukkan kedalaman. Bila parent dipilih, isi otomatis; admin dapat override jika perlu (tapi tidak disarankan).
+#### - Validasi: integer >= 0.
 
-Name
+### 5. Sequence
+#### - Nomor urut tampil. Sistem dapat memberikan opsi auto-fill (mis. atur ke paling akhir).
+#### - Validasi: integer positif.
 
-Label yang tampil di UI. Support i18n jika aplikasi multi-bahasa.
+### 6. Link
+#### - Route atau URL yang dituju. Bisa internal route (/admin/users) atau external URL.
+#### - Validasi: jika internal, periksa keberadaan route; jika eksternal, validasi format URL.
 
-Validasi: tidak kosong, panjang maksimum (mis. 100 char).
+### 7. Icon
+#### - String kelas icon (FontAwesome contoh). Admin bisa melihat preview ikon saat mengetik.
+#### - UX: sediakan picker ikon untuk kemudahan.
 
-Parent
+### 8. Tag1 / Tag2
+#### - Opsional: untuk keperluan styling atau menandai menu (warna, badge).
+#### - Misal Tag1 = warna background kecil di menu.
 
-Dropdown berisi daftar menu yang bisa dipilih sebagai parent. Pilih Select Parent Menu jika top-level.
+### 9. Status (toggle)
+#### Menentukan apakah menu aktif. Non-aktif menyembunyikan menu dari UI.
 
-Catatan: saat memilih parent, Level sebaiknya dihitung otomatis (parent.level + 1).
+### 10. Buttons
+#### - SAVE: submit form (server-side validasi + simpan ke DB). Berikan feedback (success / error).
+#### - BACK: kembali ke daftar menu tanpa menyimpan.
 
-Level
+### 11. Alur validasi & UX tambahan:
+#### - Gunakan validasi real-time di form (client-side) dan cek ulang di server.
+#### - Tampilkan pesan kesalahan dekat field terkait.
+#### - Saat menyimpan, gunakan transaksi DB bila menyertakan multiple updates (mis. reorder sequence).
+#### - Setelah simpan, redirect ke Menu Management dan tampilkan toast: “Menu berhasil disimpan”.
 
-Menunjukkan kedalaman. Bila parent dipilih, isi otomatis; admin dapat override jika perlu (tapi tidak disarankan).
 
-Validasi: integer >= 0.
-
-Sequence
-
-Nomor urut tampil. Sistem dapat memberikan opsi auto-fill (mis. atur ke paling akhir).
-
-Validasi: integer positif.
-
-Link
-
-Route atau URL yang dituju. Bisa internal route (/admin/users) atau external URL.
-
-Validasi: jika internal, periksa keberadaan route; jika eksternal, validasi format URL.
-
-Icon
-
-String kelas icon (FontAwesome contoh). Admin bisa melihat preview ikon saat mengetik.
-
-UX: sediakan picker ikon untuk kemudahan.
-
-Tag1 / Tag2
-
-Opsional: untuk keperluan styling atau menandai menu (warna, badge).
-
-Misal Tag1 = warna background kecil di menu.
-
-Status (toggle)
-
-Menentukan apakah menu aktif. Non-aktif menyembunyikan menu dari UI.
-
-Buttons
-
-SAVE: submit form (server-side validasi + simpan ke DB). Berikan feedback (success / error).
-
-BACK: kembali ke daftar menu tanpa menyimpan.
-
-Alur validasi & UX tambahan:
-
-Gunakan validasi real-time di form (client-side) dan cek ulang di server.
-
-Tampilkan pesan kesalahan dekat field terkait.
-
-Saat menyimpan, gunakan transaksi DB bila menyertakan multiple updates (mis. reorder sequence).
-
-Setelah simpan, redirect ke Menu Management dan tampilkan toast: “Menu berhasil disimpan”.
-
-Script presentasi singkat:
-
-“Menu Editor adalah tempat konfigurasi detail tiap item navigasi. Field Parent dan Sequence penting untuk membuat struktur yang rapi—kami juga menyarankan preview ikon dan validasi route agar admin tidak memasukkan link rusak.”
+#### “Menu Editor adalah tempat konfigurasi detail tiap item navigasi. Field Parent dan Sequence penting untuk membuat struktur yang rapi—kami juga menyarankan preview ikon dan validasi route agar admin tidak memasukkan link rusak.”
